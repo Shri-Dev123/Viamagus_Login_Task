@@ -62,7 +62,6 @@ const LoginPage = () => {
           // minHeight: "100vh"
         }}
       >
-        {/* Logo */}
         <div
           className="flex w-full  justify-center"
           style={{ boxShadow: "0px 3px 7px #00000029" }}
@@ -76,10 +75,6 @@ const LoginPage = () => {
           Login
         </h2>
         <img src={treeLogo} alt="Logo" className="h-22 w-25" />
-
-        {/* Login Heading */}
-
-        {/* Email Input */}
 
         <input
           id="email"
@@ -99,7 +94,6 @@ const LoginPage = () => {
           </div>
         )}
 
-        {/* Password Input */}
         <input
           type="password"
           style={{ color: "#20B716" }}
@@ -109,7 +103,6 @@ const LoginPage = () => {
           className="mt-3 px-4 py-2 w-3/4 border-b"
         />
 
-        {/* Signin Button */}
         <button
           onClick={handleLogin}
           style={{ backgroundColor: "#20B716" }}
@@ -118,7 +111,6 @@ const LoginPage = () => {
           Sign in
         </button>
 
-        {/* Forgot Password and Signup links */}
         <div className="flex justify-between w-3/4">
           <a href="#" className="mt-2  hover:underline">
             Forgot Password?
@@ -132,10 +124,8 @@ const LoginPage = () => {
           </a>
         </div>
 
-        {/* OR Heading */}
         <h3 className="mt-2 text-center">OR</h3>
 
-        {/* Continue with Gmail and Facebook buttons */}
         <div className="flex w-full mb-10 flex-col items-center justify-center bg-white mb-0 gap-3 rounded-lg">
           <button
             style={{ backgroundColor: "#4285F4" }}
