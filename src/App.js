@@ -55,16 +55,16 @@ const LoginPage = () => {
         className="w-50vw flex flex-col items-center justify-start bg-white mb-8 rounded-lg h-screen z-10"
         style={{
           position: "relative",
-          top: "-15vh",
+          top: "-10vh",
           minWidth: "40vw",
-          maxWidth: "60vw"
+          maxWidth: "50vw"
           // maxHeight: "100vh",
           // minHeight: "100vh"
         }}
       >
         {/* Logo */}
         <div
-          className="flex w-full justify-center"
+          className="flex w-full  justify-center"
           style={{ boxShadow: "0px 3px 7px #00000029" }}
         >
           <img src={amazonLogo} alt="Logo" className="h-20 w-20" />
@@ -80,7 +80,9 @@ const LoginPage = () => {
         {/* Login Heading */}
 
         {/* Email Input */}
+
         <input
+          id="email"
           type="text"
           placeholder="Email"
           style={{ "::placeholder": { color: "#20B716" } }}
@@ -88,16 +90,14 @@ const LoginPage = () => {
           onChange={handleEmailChange}
           className="mt-2 px-4 py-2  w-3/4  border-b"
         />
-        <div className="flex p-0 m-0 flex-row items-left">
-          {emailError && (
-            <>
-              <img src={errorIcon} alt="Error" className="h-4 w-4 mr-1" />
-              <span style={{ color: "#EE2D6E" }} className=" text-sm">
-                {emailError}
-              </span>
-            </>
-          )}
-        </div>
+        {emailError && (
+          <div className="flex items-start mt-1">
+            <img src={errorIcon} alt="Error" className="h-4 w-4 mr-1" />
+            <span style={{ color: "#EE2D6E" }} className="text-sm">
+              {emailError}
+            </span>
+          </div>
+        )}
 
         {/* Password Input */}
         <input
