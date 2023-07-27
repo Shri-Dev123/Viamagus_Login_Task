@@ -3,6 +3,8 @@ import bacgroundImage from "./images/tree-background-big.png";
 import amazonLogo from "./images/amazon.png";
 import treeLogo from "./images/tree-logo-big.png";
 import errorIcon from "./images/Group 2.svg";
+import facebookLogo from "./images/facebook-big.png";
+import googleLogo from "./images/google-big.png";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -33,7 +35,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-full ">
       <div
         className="h-30vh w-full bg-red bg-center z-0"
         style={{
@@ -50,14 +52,14 @@ const LoginPage = () => {
       </div>
 
       <div
-        className="w-50vw flex flex-col items-center justify-start bg-white mb-0 border rounded-lg z-10"
+        className="w-50vw flex flex-col items-center justify-start bg-white mb-8 rounded-lg h-screen z-10"
         style={{
           position: "relative",
           top: "-15vh",
           minWidth: "40vw",
-          maxWidth: "60vw",
-          maxHeight: "80vh",
-          minHeight: "100vh"
+          maxWidth: "60vw"
+          // maxHeight: "100vh",
+          // minHeight: "100vh"
         }}
       >
         {/* Logo */}
@@ -67,7 +69,12 @@ const LoginPage = () => {
         >
           <img src={amazonLogo} alt="Logo" className="h-20 w-20" />
         </div>
-        <h2 className="text-3xl font-semibold mt-1">Login</h2>
+        <h2
+          style={{ color: "#20B716" }}
+          className="text-3xl font-semibold mt-1"
+        >
+          Login
+        </h2>
         <img src={treeLogo} alt="Logo" className="h-22 w-25" />
 
         {/* Login Heading */}
@@ -106,7 +113,7 @@ const LoginPage = () => {
         <button
           onClick={handleLogin}
           style={{ backgroundColor: "#20B716" }}
-          className="mt-6 hover:bg-blue-600 text-white px-6 py-2 w-3/4 rounded-lg"
+          className="mt-6 hover:bg-blue-600 text-white px-6 py-2 w-3/4 rounded-full"
         >
           Sign in
         </button>
@@ -129,18 +136,30 @@ const LoginPage = () => {
         <h3 className="mt-2 text-center">OR</h3>
 
         {/* Continue with Gmail and Facebook buttons */}
-        <div className="flex w-full mb-8 flex-col items-center justify-center bg-white mb-0 gap-3 rounded-lg">
+        <div className="flex w-full mb-10 flex-col items-center justify-center bg-white mb-0 gap-3 rounded-lg">
           <button
             style={{ backgroundColor: "#4285F4" }}
-            className="mt-6  hover:bg-blue-600 text-white px-6 py-2 w-3/4 rounded-lg"
+            className="flex items-center  mt-6  hover:bg-blue-600 text-white px-2 py-2 w-3/4"
           >
-            Continue with Gmail
+            <img
+              src={googleLogo}
+              alt="Google Logo"
+              className="h-8 w-8 ml-0 pl-0 mr-3"
+            />
+            <span className="flex-grow text-center">Continue with Gmail</span>
           </button>
           <button
             style={{ backgroundColor: "#1877F2" }}
-            className="w-3/4 bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-lg"
+            className="flex items-center  mt-6 mb-4  hover:bg-blue-600 text-white px-2 py-2 w-3/4"
           >
-            Continue with Facebook
+            <img
+              src={facebookLogo}
+              alt="Facebook Logo"
+              className="h-8  w-8 ml-0 pl-0 mr-3"
+            />
+            <span className="flex-grow text-center">
+              Continue with Facebook
+            </span>
           </button>
         </div>
       </div>
